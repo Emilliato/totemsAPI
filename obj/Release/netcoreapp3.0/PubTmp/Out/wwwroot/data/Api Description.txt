@@ -1,0 +1,28 @@
+﻿This Api exposes a list of shona totems each totem should have an id, origin, name, description, and body, an image url 
+The users should be able to get a list of all totems, list of totems with the same id
+
+Rules
+Totems should have different id's (murambwi, mukanya)
+The names are actual animal names which can belong to multiple ID's
+
+Usage
+Retrieval (Open/Not restricted)
+/totems/{id} retrieves a specific totem with a matching id
+/totems/{origin} retrives a specific totem with a matching origin
+/totems/{name} retrieves all totems with the same name but different id's
+/totems/ retrieves all totems in the database
+
+Create (uses conditions and is restricted to admin with a valid token)
+Create a web interface for this 
+takes a number of arguements to create a totem
+can also be done through command line.
+
+Project Description.
+We must have a descritoin page and admin section that we can use for adding, updating and deleteing items
+
+Home Page
+Describe what the API does
+Describe the background of the Shona Caulture
+Give examples of usage.
+Note that we do not need to create an API key here since users only need to retrieve data. (Future work is to create an authentication application for registering users).
+

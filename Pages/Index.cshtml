@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="container bg-light">
+        <div class="row text-center pad bg-primary">
+            <div class="col-lg-12">
+                <h3 class="pad-top text-capitalize">API for totems.</h3>
+            </div>
+        </div>
+        <div class="row pad ">
+            <div class="col-lg-12">
+                <h4>Significance of Totems in Zimabwe</h4>
+
+                <p class="text-justify">As Zimbabweans we have lost our culture, we do not have tangible things that we can 
+                pass to the next generation which can also remind us of how people lived long back. 
+                As part of our culture different tribes were identified by totems. 
+                These were used to create a civilized community with strong relationships. 
+                Totems are based on animal names or organs from other animals. 
+                Some say totems were created to preserve wild life which is particularly true in the sense 
+                that it is a taboo to eat an animal that symbolizes your totem.</p>
+                <p class="text-justify">In Zimbabwe we have two major tribes (Shona and Ndebele) both of which used totems to 
+                praise each other when they did good.
+                Although there are quite a few animals that are used as totems, there are more than one version of each 
+                totem which aroused from different origins. 
+                For example, we have Soko named after a monkey with variants being Murehwa, Makwiramiti, Bvudzijena etc.</p>
+            </div>
+        </div>
+        <div class="row pad">
+            <div class="col-lg-12">
+                <h4 id="list1">List of well known totems</h4>
+                <p>
+                    This list contains the Totems we have added in the API.
+                    Here we have only mention the animal names and the variant of the totem
+                </p>
+                <div class="row pad">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="text-lg-center col-sm-6">
+                        <ul class="list-group myUl">
+                            @foreach (var totem in Model.Totems)
+                            {
+                                <li class="list-group-item l-item pad list-group-item-light text-capitalize text-xl-center">  <strong>@totem.Animal &nbsp;&nbsp; &nbsp;@totem.Id</strong></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+
+                    </div>
+                </div>
+
+
+                <h5 class="pad-top">Usage of the API</h5>
+                <hr />
+                <p>The API returns data in JSON format. The examples below show how to retrieve data using different criterion.</p>
+                <ul>
+                    <li style="list-style-type:square;"><span><i>hostname/totems</i> - default list of totems</span></li>
+                    <li style="list-style-type:square;"><span><i>hostname/totems/totem/{string}</i> - retrieves a specific totem with a matching id or origin</span></li>
+                    <li style="list-style-type:square;"><span><i>hostname/totems/all/{name}</i> - retrieves all totems with a matching totem name</span></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
